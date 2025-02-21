@@ -22,12 +22,12 @@
     "split":
     {
         "enabled": true,
-        "soft_serial_pin": "GP1"
+        "soft_serial_pin": "D2"
     },
     "matrix_pins":
     {
-        "rows": ["GP9", "GP8", "GP7", "GP6"],
-        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21", "GP4"]
+        "rows": ["B5", "B4", "E6", "D7"],
+        "cols": ["F6", "F7", "B1", "B3", "B2", "B6", "D4"]
     },
     "layout": "LAYOUT",
     "layouts":
