@@ -26,6 +26,16 @@
 // #define MASTER_RIGHT
 #define EE_HANDS
 
+/* layer count */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
+
+/* tapping term */
+#define TAPPING_TERM 200 /* global */
+
+/* One shot key */
+#define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 2000  /* Time (in ms) before the one shot key is released */
+
 /* Encoder EC-11 */
 #define ENCODERS_PAD_A { F4 }
 #define ENCODERS_PAD_B { F5 }
@@ -43,7 +53,7 @@
 // #define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
 #define SPLIT_POINTING_ENABLE
 #define POINTING_DEVICE_RIGHT
-#define POINTING_DEVICE_ROTATION_270
+#define POINTING_DEVICE_ROTATION_90
 // #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
 
 // sensitivity, default 4x, curved overlay min 2x

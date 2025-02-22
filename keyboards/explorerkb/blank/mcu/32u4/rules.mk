@@ -6,13 +6,17 @@ BOOTLOADER = caterina
 
 LTO_ENABLE = yes
 
-# feature needed
-TAP_DANCE_ENABLE = yes # 1744
-COMBO_ENABLE = yes # 2200
+# feature
+QMK_SETTINGS = no # cuma ngefek di vial
+TAP_DANCE_ENABLE = no # 1744
+COMBO_ENABLE = no # 2200
+KEY_OVERRIDE_ENABLE = no
 
 # memory saving
-QMK_SETTINGS = no
-MAGIC_ENABLE = no
-GRAVE_ESC_ENABLE = no
 SPACE_CADET_ENABLE = no
-KEY_OVERRIDE_ENABLE = no
+GRAVE_ESC_ENABLE = no
+MAGIC_ENABLE = no
+
+# gak guna
+BACKLIGHT_ENABLE = no
+RGBLIGHT_ENABLE = no
