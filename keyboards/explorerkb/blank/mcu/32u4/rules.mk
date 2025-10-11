@@ -8,7 +8,7 @@ LTO_ENABLE = yes
 
 # feature
 QMK_SETTINGS = no # cuma ngefek di vial
-TAP_DANCE_ENABLE = no # 1744
+TAP_DANCE_ENABLE = yes # 1744
 COMBO_ENABLE = no # 2200
 KEY_OVERRIDE_ENABLE = no
 

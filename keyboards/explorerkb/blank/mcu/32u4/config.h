@@ -27,10 +27,10 @@
 #define EE_HANDS
 
 /* layer count */
-#define DYNAMIC_KEYMAP_LAYER_COUNT 5
+#define DYNAMIC_KEYMAP_LAYER_COUNT 4
 
 /* tapping term */
-#define TAPPING_TERM 200 /* global */
+#define TAPPING_TERM 200
 
 /* One shot key */
 #define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
@@ -57,7 +57,7 @@
 // #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
 
 // sensitivity, default 4x, curved overlay min 2x
-#define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_1X
+#define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_2X
 
 // experimental buat tau speed nambah ato engga, jawabannya iya
 #define SELECT_SOFT_SERIAL_SPEED 0
@@ -69,9 +69,9 @@
 #define I2C1_SDA_PIN D1
 
 #ifdef VIAL_ENABLE
-  #define VIAL_TAP_DANCE_ENTRIES 4
+  #define VIAL_TAP_DANCE_ENTRIES 1
   #define VIAL_KEY_OVERRIDE_ENTRIES 0
-  #define VIAL_COMBO_ENTRIES 3
+  #define VIAL_COMBO_ENTRIES 0
 #endif
 
 /* memory saving */

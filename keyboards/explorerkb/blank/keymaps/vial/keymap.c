@@ -18,7 +18,6 @@
 
 #include QMK_KEYBOARD_H
 
-/* encoder click to switch mode */
 enum custom_keycodes {
   ENC_MODE,
   ENC_LEFT,
@@ -90,43 +89,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
-/* encoder end */
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(
-        KC_ESC,         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                               KC_Y,           KC_U,   KC_I,     KC_O,     KC_P,     KC_LGUI,
-        KC_TAB,         KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                               KC_H,           KC_J,   KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
-        OSM(MOD_LSFT),  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                               KC_N,           KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  OSL(3),
-        KC_LCTL,        KC_MUTE,  KC_BTN3,  KC_BTN2,  KC_LALT,  LT(1, KC_SPC),  ENC_MODE, XXXXXXX,  LT(2, KC_BSPC), KC_ENT, KC_MPRV,  KC_MPLY,  KC_MNXT,  TO(4)
+        KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                               KC_Y,           KC_U,   KC_I,     KC_O,     KC_P,     KC_LGUI,
+        KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                               KC_H,           KC_J,   KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
+        KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                               KC_N,           KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,
+        KC_LCTL,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_LALT,  LT(1, KC_SPC),  ENC_MODE, XXXXXXX,  LT(2, KC_BSPC), KC_ENT, XXXXXXX,  XXXXXXX,  XXXXXXX,  TO(3)
         ),
 
     [1] = LAYOUT(
-        KC_ESC,         LSFT(KC_1), LSFT(KC_2),   LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),                       LSFT(KC_6),     LSFT(KC_7), LSFT(KC_8),     LSFT(KC_9), LSFT(KC_0), KC_LGUI,
-        KC_TAB,         KC_1,       KC_2,         KC_3,       KC_4,       KC_5,                             KC_6,           KC_7,       KC_8,           KC_9,       KC_0,       XXXXXXX,
-        OSM(MOD_LSFT),  XXXXXXX,    LSFT(KC_GRV), KC_GRV,     KC_LBRC,    LSFT(KC_LBRC),                    LSFT(KC_RBRC),  KC_RBRC,    KC_COMM,        KC_DOT,     KC_SLSH,    XXXXXXX,
-        KC_LCTL,        XXXXXXX,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,      XXXXXXX,  XXXXXXX,  XXXXXXX,        XXXXXXX,    LSFT(KC_SCLN),  XXXXXXX,    XXXXXXX,    XXXXXXX
+        KC_ESC,   LSFT(KC_1), LSFT(KC_2),   LSFT(KC_3), LSFT(KC_4), LSFT(KC_5),                       LSFT(KC_6),     LSFT(KC_7), LSFT(KC_8),     LSFT(KC_9), LSFT(KC_0), KC_LGUI,
+        KC_TAB,   KC_1,       KC_2,         KC_3,       KC_4,       KC_5,                             KC_6,           KC_7,       KC_8,           KC_9,       KC_0,       XXXXXXX,
+        KC_LSFT,  XXXXXXX,    LSFT(KC_GRV), KC_GRV,     KC_LBRC,    LSFT(KC_LBRC),                    LSFT(KC_RBRC),  KC_RBRC,    KC_COMM,        KC_DOT,     KC_SLSH,    XXXXXXX,
+        KC_LCTL,  XXXXXXX,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,      XXXXXXX,  XXXXXXX,  KC_BSPC,        KC_ENT,     LSFT(KC_SCLN),  XXXXXXX,    XXXXXXX,    XXXXXXX
         ),
 
     [2] = LAYOUT(
-        KC_ESC,         XXXXXXX,        XXXXXXX,      LSFT(KC_MINS),  LSFT(KC_EQL), KC_PGUP,                      XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_BSLS,  LSFT(KC_BSLS),  KC_LGUI,
-        KC_TAB,         KC_HOME,        KC_END,       KC_MINS,        KC_EQL,       KC_PGDN,                      KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  XXXXXXX,        XXXXXXX,
-        OSM(MOD_LSFT),  LSFT(KC_COMM),  LSFT(KC_DOT), XXXXXXX,        XXXXXXX,      KC_DEL,                       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,        XXXXXXX,
-        KC_LCTL,        XXXXXXX,        XXXXXXX,      XXXXXXX,        XXXXXXX,      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,        XXXXXXX
+        KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,                        XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MINS,  KC_EQL,   KC_LGUI,
+        KC_TAB,   KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,                       KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  KC_BSLS,  KC_DEL,
+        KC_LSFT,  KC_F11,   KC_F12,   XXXXXXX,  XXXXXXX,  XXXXXXX,                      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+        KC_LCTL,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
         ),
 
     [3] = LAYOUT(
-        KC_ESC,         KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,                        KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_LGUI,
-        KC_TAB,         KC_F11,   KC_F12,   XXXXXXX,  XXXXXXX,  XXXXXXX,                      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
-        OSM(MOD_LSFT),  KC_CAPS,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,                      XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
-        KC_LCTL,        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
-        ),
-
-    [4] = LAYOUT(
-        KC_ESC,         KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                       KC_Y,     KC_U,   KC_I,     KC_O,     KC_P,     KC_LGUI,
-        KC_TAB,         KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                       KC_H,     KC_J,   KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
-        OSM(MOD_LSFT),  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                       KC_N,     KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
-        KC_LCTL,        KC_F2,    KC_F5,    KC_F3,    XXXXXXX,  KC_SPC,  XXXXXXX,  XXXXXXX, KC_BSPC,  KC_ENT, KC_MPRV,  KC_MPLY,  KC_MNXT,  TO(0)
+        KC_ESC,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,                       KC_Y,     KC_U,   KC_I,     KC_O,     KC_P,     KC_LGUI,
+        KC_TAB,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,                       KC_H,     KC_J,   KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
+        KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,                       KC_N,     KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  XXXXXXX,
+        KC_LCTL,  XXXXXXX,  KC_F5,    KC_F3,    KC_LALT,  KC_SPC,  XXXXXXX,  XXXXXXX, KC_BSPC,  KC_ENT, XXXXXXX,  XXXXXXX,  XXXXXXX,  TO(0)
         )
 };
 
@@ -151,12 +141,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
             ENCODER_CCW_CW(KC_TRNS, KC_TRNS),
             },
     [3] =   {
-            //Encoder 1
-            ENCODER_CCW_CW(KC_TRNS, KC_TRNS),
-            //Encoder 2
-            ENCODER_CCW_CW(KC_TRNS, KC_TRNS),
-            },
-    [4] =   {
             //Encoder 1
             ENCODER_CCW_CW(KC_TRNS, KC_TRNS),
             //Encoder 2
